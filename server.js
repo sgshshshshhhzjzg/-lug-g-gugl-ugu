@@ -23,7 +23,7 @@ const log = message => {
 //Alt Kısma Dokunma !
 require("./util/eventLoader")(client); //CCD Code!
 
-client.login(ayarlar.Token); //CCD Code!
+client.login("ODExNTQ3MTkyNjUzMjUwNTcw.YCzyOA.-LmT3bxPTKjuJdNrXWYimvgTNHc"); //CCD Code!
 
 client.commands = new Discord.Collection(); //CCD Code!
 client.aliases = new Discord.Collection(); //CCD Code!

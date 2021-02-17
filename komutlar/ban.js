@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     .addField("Banlanan Kullanıcı", kullanıcı)
     .addField("Banlayan Yetkili", message.author) //Ccd Code
     .setColor(oldu);
-  message.channel.send(log);
+  client.channels.cache.get(log).send(logmesaj);
 };
 
 exports.conf = {

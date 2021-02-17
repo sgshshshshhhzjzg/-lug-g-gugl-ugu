@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
     ); //Ccd Code
 
   if (args[0] === "ayarla") {
-    db.set(`banlog_${message.guild.id}`, kanal.id); 
+    db.set(`banlog_${message.guild.id}`, kanal.id);
     message.channel.send(
       new Discord.MessageEmbed().setDescription(
         "Ban Log Kanalı Başarıyla " + kanal + " Olarak Ayarlandı !"

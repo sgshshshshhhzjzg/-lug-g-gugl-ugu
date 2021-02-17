@@ -49,7 +49,7 @@ if (!client.commands.has(command)) {
      message.channel.send(
       new Discord.MessageEmbed()
        .setColor(ayarlar.hata)
-   .setDescription("**Botta __" + command + '__ adında bir komut bulunamadım !*'))
+   .setDescription("*Botta __" + command + '__ adında bir komut bulunamadım !*'))
   }
 }
      }

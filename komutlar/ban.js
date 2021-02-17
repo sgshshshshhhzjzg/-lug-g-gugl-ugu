@@ -3,7 +3,7 @@ const db = require("quick.db");
 const ayarlar = "../ayarlar.json"; //Ccd Code
 
 exports.run = async (client, message, args) => {
-  if (!message.member.hasPermissions("BAN_MEMBERS")) //Ccd Code
+  if (!message.member.permissions.has("BAN_MEMBERS")) //Ccd Code
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   let oldu = ayarlar.oldu;
   let log = db.fetch(`banlog_${message.guild.id}`);
 
-  message.guild.member(kullanıcı).ban()
+  message.guild.member(kullanıcı).ban();
   
   const başarılı = new Discord.MessageEmbed() //Ccd Code
     .setTitle("Kullanıcı Banlandı !")

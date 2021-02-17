@@ -20,4 +20,10 @@ exports.run = async (client, message, args, tools) => {
   
   .setThumbnail(user.avatarURL())
   
-  .setTitle(`${user.username}#${user.discriminator} Ku`)
+  .setTitle(`${user.username}#${user.discriminator} Kullanıcı Bilgi`)
+  
+  .addField("Kullanıcı İsmi: ",`${user.username}#${user.discriminator)`, true)
+  
+  
+  message.channel.send({embed});
+  }

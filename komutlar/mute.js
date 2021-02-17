@@ -10,13 +10,18 @@ exports.run = async (client, message, args) => {
         )
         .setColor("RANDOM")
     );
-  
-  let muterol = db.fetch(`muterol_${message.guild.id}`)
-  
-  let kullanıcı = message.mentions.members.first()
-  
-  kullanıcı.roles.add(muterol)
-  
+
+  let muterol = db.fetch(`muterol_${message.guild.id}`);
+
+  let kullanıcı = message.mentions.members.first();
+
+  kullanıcı.roles.add(muterol);
+
+  const mutemesaj = new Discord.MessageEmbed()
+    .setTitle("Kullanıcı Susturuldu !")
+    .addField("Susturan Yetkili;", message.author)
+    .addField("Susturulan Kullanıcı;", kullanıcı);
+  message.channel.send(mutemesaj);
 };
 
 exports.conf = {

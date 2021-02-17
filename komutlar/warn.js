@@ -14,6 +14,8 @@ exports.run = async (client, message, args) => {
   
   let warn = await db.fetch(`warn_${message.guild.id}_${kullanıcı.id}`)
   
+  let log = db.fetch(`warnlog_${message.guild.id}`)
+  
   let sebep = args.slice(1).join(' ')
   
   if(!sebep) {
@@ -29,14 +31,21 @@ exports.run = async (client, message, args) => {
   .setTitle("Kullanıcı Uyarıldı !")
   .addField("Uyaran Yetkili", message.author)
   .addField("Uyarılan Kullanıcı", kullanıcı)
-  message.channel.send(anancıyızbizorg)
+  message.channel.send(anancıyızbizorg).then(mesaj => mesaj.delete({timeout: 5000}))
+  
+  const logmesaj = new Discord.MessageEmbed()
+  .setTitle("Bir Kullanıcı Uyarıldı !")
+  .addField("Uyaran Yetkili", message.author)
+  .addField("Uyarılan Kullanıcı", kullanıcı)
+  .addField("Uyarma Sebebi", sebep)
+  client.channels.cache.get(log).send(logmesaj)
   
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [""],
+  aliases: ["uyar"],
   permlvl: 1 //Ccd Code
 };
 

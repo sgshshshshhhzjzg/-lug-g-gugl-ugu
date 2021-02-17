@@ -13,11 +13,19 @@ exports.run = async (client, message, args) => {
   let log = message.mentions.channels.first()
   
   if(args[0] === "ayarla") {
-    db.set(`warnlog_${message.guild.id}`)
+    db.set(`warnlog_${message.guild.id}`, log.id)
     const ayarlandı = new Discord.MessageEmbed()
     .setDescription(`Uyarı Log Kanalı Başarıyla ${log} Olarak Ayarlandı !`)
     .setColor("RANDOM")
     message.channel.send(ayarlandı)
+  }
+  
+  if(args[0] === "sıfırla") {
+    db.delete(`warnlog_${message.guild.id}`)
+    const sıfırlandı = new Discord.MessageEmbed()
+    .setDescription(`Uyarı Log Kanalı Başarıyla Sıfırlandı !`)
+    .setColor("RANDOM")
+    message.channel.send(sıfırlandı)
   }
   
 }

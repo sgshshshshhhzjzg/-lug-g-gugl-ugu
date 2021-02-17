@@ -21,13 +21,9 @@ setInterval(() => {
 }, 280000);
 
 let prefix = ayarlar.prefix;
-  
 
-
-
-
-console.log("Ben Şuan Aktifim...");
-console.log("Made By FadeAway x Plasmic");
+console.log("Başarı ile bağlantı kurdum ve aktifim... Ccd Code <3");
+console.log("Ccd Code <3");
 const log = message => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
 };
@@ -106,10 +102,5 @@ client.elevation = message => {
   if (message.author.id === ayarlar.sahip) permlvl = 4;
   return permlvl;
 };
-
-
-
-
-
 
 client.login(process.env.TOKEN);

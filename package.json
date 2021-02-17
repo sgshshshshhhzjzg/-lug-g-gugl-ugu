@@ -1,11 +1,11 @@
 {
-  "//1": "Her Şey Plasmic İçin <3 x FadeAway",
-  "name": "Plasmic V12 Boş Altyapı",
+  "//1": "Ccd Code",
+  "name": "ccdcodemoderasyon",
   "version": "0.0.1",
-  "description": "Al kullan işte :d",
-  "main": "plasmic.js",
+  "description": "Ccd Code Gelişmiş v12 Moderasyon Altyapısı By FadeAway x Ccd",
+  "main": "ccdcode.js",
   "scripts": {
-    "start": "node plasmic.js"
+    "start": "node ccdcode.js"
   },
   "dependencies": {
     "canvas": "^2.6.1",
@@ -14,13 +14,14 @@
     "discord.js": "^12.5.0",
     "express": "^4.17.1",
     "fs": "^0.0.2",
+    "jimp": "^0.16.1",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
+    "os": "^0.1.1",
     "parse-ms": "^2.1.0",
     "quick.db": "^7.1.2",
-    "jimp": "^0.16.1",
-    "quick.db-prototypes": "^1.0.0",
-    "quick.db-extended": "^7.1.11"
+    "quick.db-extended": "^7.1.11",
+    "quick.db-prototypes": "^1.0.0"
   },
   "engines": {
     "node": "12.x"

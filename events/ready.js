@@ -17,7 +17,7 @@ module.exports = client => {
   );
   client.user.setStatus("idle");
   var oyun = [
-    `Plasmic <3`,
+    `Ccd & Fade Code <3`,
   ];
 
   setInterval(function() {

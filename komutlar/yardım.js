@@ -7,7 +7,7 @@ exports.run = async(client, message, args) => {
   
   const yardım = new Discord.MessageEmbed()
   .setTitle(`${client.username} Yardım Menüsü`)
-  .setDescription(``)
+  .setDescription(`sa`)
   message.channel.send(yardım)
   
 }

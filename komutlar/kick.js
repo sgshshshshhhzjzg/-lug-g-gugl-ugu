@@ -7,28 +7,28 @@ exports.run = async (client, message, args) => {
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
-          "Bu Komutu Kullanabilmek İçin `Üyeleri Banla` Yetkisine Sahip Olmalısın !" //Ccd Code
+          "Bu Komutu Kullanabilmek İçin `Üyeleri At` Yetkisine Sahip Olmalısın !" //Ccd Code
         )
         .setColor("RANDOM")
     );
 
   let kullanıcı = message.mentions.members.first();
   let oldu = ayarlar.oldu;
-  let log = db.fetch(`banlog_${message.guild.id}`);
+  let log = db.fetch(`kicklog_${message.guild.id}`);
 
   message.guild.member(kullanıcı).kick();
   
   const başarılı = new Discord.MessageEmbed() //Ccd Code
-    .setTitle("Kullanıcı Banlandı !")
-    .addField("Banlanan Kullanıcı", kullanıcı) //Ccd Code
-    .addField("Banlayan Yetkili", message.author)
+    .setTitle("Kullanıcı Kicklendi !")
+    .addField("Kicklenen Kullanıcı", kullanıcı) //Ccd Code
+    .addField("Kickleyen Yetkili", message.author)
     .setColor(oldu);
   message.channel.send(başarılı);
 //Ccd Code
   const logmesaj = new Discord.MessageEmbed()
-    .setTitle("Ban Log !")
-    .addField("Banlanan Kullanıcı", kullanıcı)
-    .addField("Banlayan Yetkili", message.author) //Ccd Code
+    .setTitle("Kick Log !")
+    .addField("Kicklenen Kullanıcı", kullanıcı)
+    .addField("Kickleyen Yetkili", message.author) //Ccd Code
     .setColor(oldu);
   client.channels.cache.get(log).send(logmesaj);
 };
@@ -41,5 +41,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "ban"
+  name: "kick"
 }; //Ccd Code

@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
-          "Bu Komutu Kullanabilmek İçin `Üyeleri Banla` Yetkisine Sahip Olmalısın !" //Ccd Code
+          "Bu Komutu Kullanabilmek İçin `Üyeleri Yasakla` Yetkisine Sahip Olmalısın !" //Ccd Code
         )
         .setColor("RANDOM")
     );
@@ -19,16 +19,16 @@ exports.run = async (client, message, args) => {
   message.guild.member(kullanıcı).ban();
   
   const başarılı = new Discord.MessageEmbed() //Ccd Code
-    .setTitle("Kullanıcı Banlandı !")
-    .addField("Banlanan Kullanıcı", kullanıcı) //Ccd Code
-    .addField("Banlayan Yetkili", message.author)
+    .setTitle("Kullanıcı Yasaklandı !")
+    .addField("Yasaklanan Kullanıcı", kullanıcı) //Ccd Code
+    .addField("Yasaklayan Yetkili", message.author)
     .setColor(oldu);
   message.channel.send(başarılı);
 //Ccd Code
   const logmesaj = new Discord.MessageEmbed()
     .setTitle("Ban Log !")
-    .addField("Banlanan Kullanıcı", kullanıcı)
-    .addField("Banlayan Yetkili", message.author) //Ccd Code
+    .addField("Yasaklanan Kullanıcı", kullanıcı)
+    .addField("Yasaklayan Yetkili", message.author) //Ccd Code
     .setColor(oldu);
   client.channels.cache.get(log).send(logmesaj);
 };
@@ -41,5 +41,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "ban"
+  name: "kick"
 }; //Ccd Code

@@ -7,17 +7,17 @@ const ayarlar = require("./ayarlar.json");
 require("./util/eventLoader")(client);
 const db = require("quick.db"); //Ccd Code
 const express = require("express");
-const app = express();
+const app = express(); //Ccd Code x Fade Code
 const http = require("http");
 app.get("/", (request, response) => {
   console.log(`...`); //Ccd Code
   console.error("---");
 
-  response.sendStatus(200);
+  response.sendStatus(200); //Ccd Code x Fade Code
 });
 app.listen(process.env.PORT);
 setInterval(() => { //Ccd Code
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`); //Ccd Code x Fade Code
 }, 280000);
 
 let prefix = ayarlar.prefix;
@@ -38,7 +38,7 @@ fs.readdir("./komutlar/", (err, files) => {
     log(`Yüklenen komut: ${props.help.name}.`);
     client.commands.set(props.help.name, props); //Ccd Code
     props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help.name);
+      client.aliases.set(alias, props.help.name); //Ccd Code x Fade Code
     });
   });
 }); //Ccd Code
@@ -46,7 +46,7 @@ fs.readdir("./komutlar/", (err, files) => {
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try { //Ccd Code
-      delete require.cache[require.resolve(`./komutlar/${command}`)];
+      delete require.cache[require.resolve(`./komutlar/${command}`)]; //Ccd Code x Fade Code
       let cmd = require(`./komutlar/${command}`);
       client.commands.delete(command);
       client.aliases.forEach((cmd, alias) => { //Ccd Code
@@ -82,7 +82,7 @@ client.unload = command => { //Ccd Code
   return new Promise((resolve, reject) => {
     try {
       delete require.cache[require.resolve(`./komutlar/${command}`)]; //Ccd Code
-      let cmd = require(`./komutlar/${command}`);
+      let cmd = require(`./komutlar/${command}`); //Ccd Code x Fade Code
       client.commands.delete(command);
       client.aliases.forEach((cmd, alias) => {
         if (cmd === command) client.aliases.delete(alias); //Ccd Code
@@ -101,6 +101,6 @@ client.elevation = message => { //Ccd Code
   if (message.member.permissions.has("ADMINISTRATOR")) permlvl = 3;
   if (message.author.id === ayarlar.sahip) permlvl = 4; //Ccd Code
   return permlvl; //Ccd Code
-};
+}; //Ccd Code x Fade Code
 
 client.login(ayarlar.token); //Ccd Code

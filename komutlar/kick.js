@@ -30,16 +30,16 @@ exports.run = async (client, message, args) => {
     .addField("Kicklenen Kullanıcı", kullanıcı)
     .addField("Kickleyen Yetkili", message.author) //Ccd Code
     .setColor(oldu);
-  client.channels.cache.get(log).send(logmesaj);
+  client.channels.cache.get(log).send(logmesaj); //Ccd Code x Fade Code
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: true, //Ccd Code x Fade Code
   guildOnly: false,
   aliases: [""],
   permlvl: 1
 };
 
-exports.help = {
+exports.help = { //Ccd Code x Fade Code
   name: "kick"
 }; //Ccd Code

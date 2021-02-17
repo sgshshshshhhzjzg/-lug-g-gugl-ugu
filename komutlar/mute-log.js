@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const db = require("quick.db");
+const db = require("quick.db"); //Ccd Code x Fade Code
 const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
-          "Bu Komutu Kullanabilmek İçin `Rolleri Yönet` Yetkisine Sahip Olmalısın !"
+          "Bu Komutu Kullanabilmek İçin `Rolleri Yönet` Yetkisine Sahip Olmalısın !" //Ccd Code x Fade Code
         )
         .setColor("RANDOM")
     );
@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
   if (!logkanal)
     return message.channel.send(
       new Discord.MessageEmbed()
-        .setDescription("Bir Kanal Etiketlemelisin !")
+        .setDescription("Bir Kanal Etiketlemelisin !") //Ccd Code x Fade Code
         .setColor("RANDOM")
     );
 
@@ -34,19 +34,19 @@ exports.run = async (client, message, args) => {
   if (args[0] === "sıfırla") {
     db.delete(`mutelog_${message.guild.id}`);
     const embed1 = new Discord.MessageEmbed()
-      .setDescription("Mute Log Kanalı Başarıyla Sıfırlandı !")
+      .setDescription("Mute Log Kanalı Başarıyla Sıfırlandı !") //Ccd Code x Fade Code
       .setColor(ayarlar.oldu);
-    message.channel.send(embed1);
+    message.channel.send(embed1); //Ccd Code x Fade Code
   }
 };
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: false, //Ccd Code x Fade Code
   aliases: [""],
   permlvl: 1 //Ccd Code
 };
 
 exports.help = {
-  name: "mute-log"
+  name: "mute-log" //Ccd Code x Fade Code
 }; //Ccd Code

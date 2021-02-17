@@ -18,12 +18,25 @@ exports.run = async (client, message, args, tools) => {
   const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
   
-  .setThumbnail(user.avatarURL())
+  .setThumbnail(anan.avatarURL)
   
-  .setTitle(`${user.username}#${user.discriminator} Kullanıcı Bilgi`)
+  .setTitle(`${anan.username}#${anan.discriminator} Kullanıcı Bilgi`)
   
-  .addField("Kullanıcı İsmi: ",`${user.username}#${user.discriminator}`, true)
-  .addField("Kullanıcı ID Numarası:", `${user.id}`, true)
-  .addField("Discord TAG", `${user.discriminator}`, true)
-  .addField("Kullanıcı Durumu", `${user.rich.presence}`, true)
-  .addField("Hesap Açma Tarihi:", `${moment.utc(user.createdAt).format('dddd, ')`)
+  .addField("Kullanıcı İsmi: ",`${anan.username}#${anan.discriminator}`, true)
+  .addField("Kullanıcı ID Numarası:", `${anan.id}`, true)
+  .addField("Discord TAG", `${anan.discriminator}`, true)
+  .addField("Hesap Açma Tarihi:", `${moment.utc(anan.createdAt).format('YYYY-MM-DD HH:mm:ss')}`, true)
+  .addField("Sunucuya Katılma Tarihi:", `${moment.utc(member.joinedAt).format('YYYY-MM-DD HH:mm:ss')}`, true)
+  message.channel.send(embed)
+}
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['profil'],
+  permlvl: 0
+}
+
+exports.help = {
+  name: "kullanıcı-bilgi"
+}

@@ -10,6 +10,18 @@ exports.run = async (client, message, args) => {
     message.channel.send(anancımısınamq)
   }
   
+  let kullanıcı = message.mentions.members.first()
+  
+  if(!kullanıcı) {
+    const qwesj31osbirsjçkokomkiığağağağağ = new Discord.MessageEmbed()
+    .setDescription("Bir Kullanıcı Etiketlemen Gerekli !")
+    .setColor("RANDOM")
+    message.chnanel.send(qwesj31osbirsjçkokomkiığağağağağ)
+  }
+  
+  db.delete(`warn_${message.guild.id}_${kullanıcı.id}`)
+  const guhrıkgmp
+  
   
   
 }

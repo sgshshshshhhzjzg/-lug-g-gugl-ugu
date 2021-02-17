@@ -26,7 +26,6 @@ exports.run = async (client, message, args) => {
   }
   
   await db.add(`warn_${message.guild.id}_${kullanıcı.id}`, 1)
-  await db.set(`uyarılar_${message.guild.id}_${kullanıcı.id}`, 1)
   const anancıyızbizorg = new Discord.MessageEmbed()
   .setTitle("Kullanıcı Uyarıldı !")
   .addField("Uyaran Yetkili", message.author)

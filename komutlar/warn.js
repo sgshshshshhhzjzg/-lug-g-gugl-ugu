@@ -23,6 +23,22 @@ exports.run = async (client, message, args) => {
     message.channel.send(anancıyızbiznet)
   }
   
+  db.add(`warn_${message.guil.id}_${kullanıcı.id}`, 1)
   
+  const anancıyızbizorg = new Discord.MessageEmbed()
+  .setTitle("Kullanıcı Uyarıldı !")
+  .addField("Uyaran Yetkili", message.author)
+  .addField("Uyarılan Kullanıcı", )
   
 }
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [""],
+  permlvl: 1 //Ccd Code
+};
+
+exports.help = {
+  name: "warn"
+}; //Ccd Code

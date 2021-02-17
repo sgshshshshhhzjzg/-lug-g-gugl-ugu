@@ -41,5 +41,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "kick"
+  name: "ban"
 }; //Ccd Code

@@ -14,7 +14,7 @@ exports.run = async (bot, message, args) => {
   .addField("**Kullanıcı Sayısı**", bot.guilds.cache.reduce((a, m) => a + m.memberCount, 0).toLocaleString(), true)
   .addField("**Sunucu Sayısı**", bot.guilds.cache.size.toLocaleString(), true)
   .addField("**Kanal Sayısı**", bot.channels.cache.size.toLocaleString(), true)
-  .addField("**Ping/Gecikme**", bot.ping+"ms", true)
+  .addField("**Ping/Gecikme**", bot.ws.ping+"ms", true)
   .addField("**Discord.js Sürümü**", "v"+Discord.version, true)
   .addField("CPU",`md\n${os.cpus().map(i => `${i.model}`)[0]}`,true)
   message.channel.send(napimstats)

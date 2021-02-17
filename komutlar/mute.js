@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   
   let muteyetkilisi = db.fetch(`muteyetkili_${message.guild.id}`)
   
-  if(!message.member.roles.has(muteyetkilisi)) return message.channel.send(new Discord.MessageEmbed().setDescription("Bu Komutu Kullanabilmek İçin Yeterli Yetkiye Sahip Değilsin !").setColor("RANDOM"))
+  if(!message.member.roles.cache.has(muteyetkilisi)) return message.channel.send(new Discord.MessageEmbed().setDescription("Bu Komutu Kullanabilmek İçin Yeterli Yetkiye Sahip Değilsin !").setColor("RANDOM"))
 
   let muterol = db.fetch(`muterol_${message.guild.id}`);
   
@@ -27,13 +27,13 @@ exports.run = async (client, message, args) => {
     .setTitle("Kullanıcı Susturuldu !")
     .addField("Susturan Yetkili;", message.author)
     .addField("Susturulan Kullanıcı;", kullanıcı);
-  message.channel.send(mutemesaj);
+  message.channel.send(mutemesaj).then(mesaj => mesaj.delete({timeout: 5000}));
   
   const logmsg = new Discord.MessageEmbed()
   .setTitle("Bir Kullanıcı Susturuldu !")
   .addField("Susturan Yetkili;", message.author)
   .addField("Susturulan Kullanıcı;", kullanıcı);
-  client.channel.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.cache.get(log).send(logmsg)
+  client.channels.cache.get(log).send(logmsg)
 };
 
 exports.conf = {

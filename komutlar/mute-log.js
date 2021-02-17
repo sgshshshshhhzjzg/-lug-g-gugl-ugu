@@ -3,7 +3,7 @@ const db = require("quick.db"); //Ccd Code x Fade Code
 const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
-  if (!message.member.permission.has("MANAGE_ROLES"))
+  if (!message.member.permissions.has("MANAGE_ROLES"))
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(

@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
 
 
   message.channel.send(
-    "**Kanala artık yazı yazılabilecek!**"
+    "**Kanala artık mesaj yazılabilecek.**"
   );
 };
 
@@ -38,6 +38,6 @@ exports.conf = {
 
 exports.help = {
   name: 'aç',
-  description: 'Sohbeti açar.',
+  description: 'Kanalı kullanıma açar.',
   usage: 'aç'
 };

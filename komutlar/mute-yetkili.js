@@ -12,31 +12,25 @@ exports.run = async (client, message, args) => {
         .setColor("RANDOM")
     );
 
-  let muterol = message.mentions.roles.first();
-
-  if (!muterol)
-    return message.channel.send(
-      new Discord.MessageEmbed()
-        .setDescription("Bir Rol Etiketlemelisin !")
-        .setColor("RANDOM")
-    );
+  let muteyetkili = message.mentions.roles.first();
 
   if (args[0] === "ayarla") {
-    db.set(`muterol_${message.guild.id}`, muterol.id);
+    db.set(`muteyetkili_${message.guild.id}`, muteyetkili.id);
     const ayarlandı = new Discord.MessageEmbed()
-      .setDescription("Mute Rolü Başarıyla Ayarlandı !")
+      .setDescription(
+        `Mute Yetkilisi Rolü Başarıyla ${muteyetkili} Olarak Ayarlandı !`
+      )
       .setColor(ayarlar.oldu);
     message.channel.send(ayarlandı);
   }
 
   if (args[0] === "sıfırla") {
-    db.delete(`muterol_${message.guild.id}`);
+    db.delete(`muteyetkili_${message.guild.id}`);
     const sıfırlandı = new Discord.MessageEmbed()
-      .setDescription("")
+      .setDescription(`Mute Yetkilisi Rolü Başarıyla Sıfırlandı !`)
       .setColor(ayarlar.oldu);
-    message.channel.send(sıfırlandı);
   }
-}; //Ccd Code x Fade Code
+};
 
 exports.conf = {
   enabled: true,
@@ -46,5 +40,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "mute-rol" //Ccd Code x Fade Code
+  name: "mute-yetkili" //Ccd Code x Fade Code
 }; //Ccd Code

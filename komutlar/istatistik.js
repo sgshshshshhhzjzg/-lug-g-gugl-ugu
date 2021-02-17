@@ -9,5 +9,12 @@ exports.run = async (bot, message, args) => {
   .setfooter('Ccd Code x Fade Code v12 Moderasyon İstatistikler', bot.user.avatarURL)
   .addField('Ccd Code', bot.user.avatarURL)
   .addField("**Ccd Code İstatistikleri**", "En iyi Moderasyon Botu!")
-  .addField("**RAM Kullanımı**", (process.memoryUsage().))
+  .addField("**RAM Kullanımı**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + 'MBD', true)
+  .addField("**Uptime Süresi**", napim)
+  .addField("**Kullanıcı Sayısı**", bot.guilds.reduce((a, m) => a + m.memberCount, 0).toLocaleString(), true)
+  .addField("**Sunucu Sayısı**", bot.guilds.size.toLocaleString(), true)
+  .addField("**Kanal Sayısı**", bot.channels.size.toLocaleString(), true)
+  .addField("**Ping/Gecikme", bot.ping+"ms", true)
+  .addField("**Discord.js Sürümü**", "v"+Discord.version, true)
+  .addField("CPU")
 }

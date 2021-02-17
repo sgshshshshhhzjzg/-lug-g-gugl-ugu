@@ -11,19 +11,15 @@ exports.run = async (client, message, args) => {
         )
         .setColor(ayarlar.hata)
     );
+  
+  let muteyetkilisi = db.fetch(`muteyetkili_${message.guild.id}`)
+  
+  if(!message.member.roles.cache.has(muteyetkilisi)) return message.channel.send(new Discord.MessageEmbed().setDescription("Bu Komutu Kullanabilmek İçin Yeterli Yetkiye Sahip Değilsin !").setColor("RANDOM"))
+  
+  let anancılarxyz = db.fetch(`muterol_${message.guild.id}`)
 
   let anan = message.mentions.members.first();
 
-  let anancılarxyz = db.fetch(`muterol_${message.guild.id}`);
-
-  if (!message.member.roles.cache.has(anancılarxyz)) {
-    const anancılarcom = new Discord.MessageEmbed()
-      .setDescription(
-        "Bu Komutu Kullanabilmek İçin Yeterli Yetkiye Sahip Değilsin !"
-      )
-      .setColor(ayarlar.hata);
-    message.channel.send(anancılarcom);
-  }
 
   anan.roles.remove(anancılarxyz);
 

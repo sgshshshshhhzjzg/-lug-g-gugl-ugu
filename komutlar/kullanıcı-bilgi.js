@@ -27,7 +27,7 @@ exports.run = async (client, message, args, tools) => {
   .addField("Discord TAG", `${anan.discriminator}`, true)
   .addField("Hesap Açma Tarihi:", `${moment.utc(anan.createdAt).format('YYYY-MM-DD HH:mm:ss')}`, true)
   .addField("Sunucuya Katılma Tarihi:", `${moment.utc(member.joinedAt).format('YYYY-MM-DD HH:mm:ss')}`, true)
-  message.channel.send(embed)
+  message.channel.send(embed) //ccd yazdı bunu aq kimse let anan koymaz onun dışında
 }
 
 exports.conf = {

@@ -17,8 +17,11 @@ exports.run = async (client, message, args) => {
   if(uyarılar == null) uyarılar = 0
   
   const uyarılarınişteaq = new Discord.MessageEmbed()
-  .setTitle(`${kullanıcı} Adlı Kullanıcının Uyarıları;`)
-  .setDescription(`${uyarılar}`)
+  .setTitle("Uyarılar !")
+  .setDescription(`
+${kullanıcı}> Adlı Kullanıcının Uyarıları; 
+${uyarılar}`)
+  .setColor("RANDOM")
   message.channel.send(uyarılarınişteaq)
   
 }

@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
-const ayarlar = require('../ayarlar.json')
+const ayarlar = require("../ayarlar.json");
 
 exports.run = async (client, message, args) => {
   if (!message.member.permission.has("MANAGE_ROLES"))
@@ -11,27 +11,33 @@ exports.run = async (client, message, args) => {
         )
         .setColor("RANDOM")
     );
-  
-  let logkanal = message.mentions.channels.first()
-  
-  if(!logkanal) return message.channel.send(new Discord.MessageEmbed().setDescription("Mute Lo").setColor("RANDOM"))
-  
-  if(args[0] === "ayarla") {
-    db.set(`mutelog_${message.guild.id}`, logkanal.id)
+
+  let logkanal = message.mentions.channels.first();
+
+  if (!logkanal)
+    return message.channel.send(
+      new Discord.MessageEmbed()
+        .setDescription("Bir Kanal Etiketlemelisin !")
+        .setColor("RANDOM")
+    );
+
+  if (args[0] === "ayarla") {
+    db.set(`mutelog_${message.guild.id}`, logkanal.id);
     const embed = new Discord.MessageEmbed()
-    .setDescription(`Mute Log Kanalı Başarıyla ${logkanal} Olarak Ayarlandı !`)
-    .setColor(ayarlar.oldu)
-    message.channel.send(embed)
+      .setDescription(
+        `Mute Log Kanalı Başarıyla ${logkanal} Olarak Ayarlandı !`
+      )
+      .setColor(ayarlar.oldu);
+    message.channel.send(embed);
   }
-  
-  if(args[0] === "sıfırla") {
-    db.delete(`mutelog_${message.guild.id}`)
+
+  if (args[0] === "sıfırla") {
+    db.delete(`mutelog_${message.guild.id}`);
     const embed1 = new Discord.MessageEmbed()
-    .setDescription("Mute Log Kanalı Başarıyla Sıfırlandı !")
-    .setColor(ayarlar.oldu)
-    message.channel.send(embed1)
+      .setDescription("Mute Log Kanalı Başarıyla Sıfırlandı !")
+      .setColor(ayarlar.oldu);
+    message.channel.send(embed1);
   }
-  
 };
 
 exports.conf = {

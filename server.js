@@ -23,7 +23,7 @@ const log = message => {
 //Alt Kısma Dokunma !
 require("./util/eventLoader")(client);
 
-client.login(ayarlar.token);
+client.login(ayarlar.Token);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();

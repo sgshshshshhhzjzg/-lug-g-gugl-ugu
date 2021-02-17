@@ -1,10 +1,8 @@
 const Discord = require('discord.js')
+const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
   
-  const ping = new Discord.MessageEmbed()
-  .setDescription(`Pingim;{client.ws.ping}`)
-  message.channel.send(ping)
 }
 
 exports.conf = {
@@ -15,5 +13,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "ping"
+  name: "ban"
 };

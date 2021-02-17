@@ -29,4 +29,4 @@ exports.help = {
   name: 'ping',
   description: 'Ping komutu işte yaw',
   usage: 'ping'
-};   //Plasmic Code・xKqntyZ_
+};

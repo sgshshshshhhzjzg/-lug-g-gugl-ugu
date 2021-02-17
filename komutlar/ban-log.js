@@ -1,4 +1,4 @@
-const Discord = require("discord.js"); //Ccd Code
+const Discord = require("discord.js"); 
 const db = require("quick.db");
 const ayarlar = require("../ayarlar.json");
 
@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
         .setColor("RANDOM")
     );
 
-  let prefix = ayarlar.prefix; //Ccd Code
+  let prefix = ayarlar.prefix; 
 
   let kanal = args[1];
 
@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
         "Bir Kanal Belirtmelisin ! Örnek; " + prefix + "ban-log ayarla #kanal"
       )
       .setColor("RANDOM")
-    ); //Ccd Code
+    ); 
 
   if (args[0] === "ayarla") {
     db.set(`banlog_${message.guild.id}`, kanal.id);
@@ -47,11 +47,11 @@ exports.run = async (client, message, args) => {
 
 exports.conf = {
   enabled: true,
-  guildOnly: false, //Ccd Code
+  guildOnly: false, 
   aliases: [""],
   permlvl: 1
 };
 
 exports.help = {
   name: "ban-log"
-}; //Ccd Code
+}; 

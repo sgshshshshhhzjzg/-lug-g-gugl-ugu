@@ -5,7 +5,7 @@ const os = require('os');
 const moment = require('moment');
 
 exports.run = async (client, message, args, tools) => {
-  let anan;
+  let anan; //let anan -_-
   
   if (message.mentions.users.first()) {
     anan = message.mentions.users.first();
@@ -22,8 +22,8 @@ exports.run = async (client, message, args, tools) => {
   
   .setTitle(`${user.username}#${user.discriminator} Kullanıcı Bilgi`)
   
-  .addField("Kullanıcı İsmi: ",`${user.username}#${user.discriminator)`, true)
-  
-  
-  message.channel.send({embed});
-  }
+  .addField("Kullanıcı İsmi: ",`${user.username}#${user.discriminator}`, true)
+  .addField("Kullanıcı ID Numarası:", `${user.id}`, true)
+  .addField("Discord TAG", `${user.discriminator}`, true)
+  .addField("Kullanıcı Durumu", `${user.rich.presence}`, true)
+  .addField("Hesap Açma Tarihi:", `${moment.utc(user.createdAt).format('dddd, ')`)

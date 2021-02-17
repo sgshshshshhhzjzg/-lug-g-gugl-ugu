@@ -1,4 +1,4 @@
-const ayarlar = require("../ayarlar.json");
+const ayarlar = ("../ayarlar.json");
 const db = require("quick.db");
 const Discord = require('discord.js');
 

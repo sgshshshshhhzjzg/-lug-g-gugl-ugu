@@ -6,15 +6,17 @@ exports.run = async(client, message, args) => {
   let prefix = ayarlar.prefix
   
   const yardım = new Discord.MessageEmbed()
-  .setTitle(`${client.username} `)
+  .setTitle(`${client.username} Yardım Menüsü`)
+  .setDescription(``)
   message.channel.send(yardım)
+  
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [''],
-  permLvL: 0
+  permlvl: 0
 }
 
 exports.help = {

@@ -1,22 +1,8 @@
-ay toB
-# Ccd Code v12 Moderasyon Altyapısı
+## Öncelikle Merhabalar, Ben FαԃҽAɯαყ#8468 Bu Altyapıyı Plasmic Code'ye Özel Yapıyorum Gayet Güzel Oldu ve Çalışmakta Aşağıyı Okursan Çok Mutlu Olurum :)
 
-Tüm altyapı ve kodlar Ccd Code ve Fade Code tarafından hazırlanıp abonelere özel paylaşılmıştır!
+**Kod Yazmak İçin Çok Sabırsızsın Farkındayım Ancak Yazmak İçin ayarlar.json'u Ayarlaman ve Komutlar Klasörünü Açmak İçin Bir Tane Kod Belirleyip komutlar/belirlediginiz-kod.js Yazdığınızda Klasörle Beraber Kodunuz Gelicektir Keyifli Kullanımlar <3**
 
-Altyapıyı alıp izinsiz kullanalara yasal işlem başlatılacaktır.
 
-**Projeyi Nasıl Kullanırım ve Aktif Ederim?**
+[YOUTUBE](https://www.youtube.com/channel/UC7KqoB3_BYjB1w1hFz098xw)
 
-- ``ayarlar.json`` dosyasının içindeki Token kısmına Discord Developer Portal'dan aldığınız kendi bot tokeninizi koyacaksınız.
-
-- ``ayarlar.json`` dosyasının içindeki sahip kısmına kendi Discord kullanıcı ID'nizi yazacaksınız.
-
-- ``ayarlar.json`` dosyasının içindeki prefix kısmına botunuzun prefixi olmasını istediğiniz şeyi yazacaksınız. Örnek: !
-
-Bunları yaptıktan sonra botunuzun aktif olması gereklidir. Komutların ve sistemlerin içindeki herkese açık yazıları değiştirebilirsiniz ama botunuzun olduğu kısıma tamamen benim tarafımdan kodlanmıştır gibi şeyler yazmanız veya bot altyapısını alıp onaylı botta kullanmanız yasakEır!
-
-*Eğer bir sıkıntı yaşarsanız [Discord](https://discord.gg/BgymM6BQTy) adresinden snucumuzdan destek alabilirsin## Bot Yapımcıları
-
-CCD#7088 = 640543103102484485
-
-FαԃҽAɯαყ#9999 = 510479430917816340
+# Okuduğun İçin Çok Teşekkürler Birde Abone Olursan Tadından Yenmez <3

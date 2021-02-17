@@ -3,6 +3,23 @@ const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
   
+  if(!message.member.permissions.has("MANAGE_MESSAGES")) {
+    const logişte = new Discord.MessageEmbed()
+    .setDescription("Bu Komutu Kullanmak İçin Gerekli Yetkiye Sahip Değilsin !")
+    .setColor("RANDOM")
+    message.channel.send(logişte)
+  }
+  
+  let log = message.mentions.channels.first()
+  
+  if(args[0] === "ayarla") {
+    db.set(`warnlog_${message.guild.id}`)
+    const ayarlandı = new Discord.MessageEmbed()
+    .setDescription(`Uyarı Log Kanalı Başarıyla ${log} Olarak Ayarlandı !`)
+    .setColor("RANDOM")
+    message.channel.send(ayarlandı)
+  }
+  
 }
 exports.conf = {
   enabled: true,

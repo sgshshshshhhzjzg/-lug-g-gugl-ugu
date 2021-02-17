@@ -23,12 +23,13 @@ exports.run = async (client, message, args) => {
     message.channel.send(anancıyızbiznet)
   }
   
-  db.add(`warn_${message.guil.id}_${kullanıcı.id}`, 1)
-  
+  await db.add(`warn_${message.guild.id}_${kullanıcı.id}`, 1)
+  await db.set(`uyarılar_${message.guild.id}_${kullanıcı.id}`, 1)
   const anancıyızbizorg = new Discord.MessageEmbed()
   .setTitle("Kullanıcı Uyarıldı !")
   .addField("Uyaran Yetkili", message.author)
-  .addField("Uyarılan Kullanıcı", )
+  .addField("Uyarılan Kullanıcı", kullanıcı)
+  message.channel.send(anancıyızbizorg)
   
 }
 

@@ -9,14 +9,14 @@ const yardım = new Discord.MessageEmbed()
 .setColor('RANDOM')
 .setTitle(`${client.user.username} - Komutlarım`)
 .setDescription(`**\`Genel\`**
-» \`${anancıccd}avatar\`: **Avatarınızı Atar**
-» \`${anancıccd}say\`: **Üye Durum Grafiğini Gösterir**
-» \`${anancıccd}kullanıcı-bilgi\`: **Etiketlediğin & Kendi Profilin Hakkında Bilgi Verir**
+» \`${anancıccd}komutadı\`: **Burayı kendinize göre ayarlayın!**
+» \`${anancıccd}komutadı\`: **Burayı kendinize göre ayarlayın!**
+» \`${anancıccd}komutadı\`: **Burayı kendinize göre ayarlayın!**
 
-**\`Kayıt\`**
-» \`${anancıccd}erkek/kız <isim> <yas>\`: **Belirtilen Kullanıcıyı Kayıt Edersiniz**
-» \`${anancıccd}nick <isim> <yas>\`: **Belirtilen Kullanıcının İsmini Değiştirirsiniz**
-» \`${anancıccd}vip al/ver\`: **Kullanıcıya Vip Al/Ver**
+**\`Sistemler\`**
+» \`${anancıccd}erkek/kız <isim> <yas>\`: **Burayı kendinize göre ayarlayın!**
+» \`${anancıccd}nick <isim> <yas>\`: **Burayı kendinize göre ayarlayın!**
+» \`${anancıccd}vip al/ver\`: **Burayı kendinize göre ayarlayın!**
 
 **\`Yetkili\`**
 » \`${anancıccd}komutadı\`: **Burayı kendinize göre ayarlayın!**

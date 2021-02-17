@@ -29,6 +29,7 @@ exports.run = async (client, message, args) => {
     const sıfırlandı = new Discord.MessageEmbed()
       .setDescription(`Mute Yetkilisi Rolü Başarıyla Sıfırlandı !`)
       .setColor(ayarlar.oldu);
+    message.channel.send(sıfırlandı)
   }
 };
 

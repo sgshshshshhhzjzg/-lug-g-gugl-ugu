@@ -12,6 +12,8 @@ exports.run = async (client, message, args) => {
   
   let kullanıcı = message.mentions.members.first()
   
+  let log = db.fetch(`warnlog_${message.guild.id}`)
+  
   if(!kullanıcı) {
     const qwesj31osbirsjçkokomkiığağağağağ = new Discord.MessageEmbed()
     .setDescription("Bir Kullanıcı Etiketlemen Gerekli !")
@@ -20,7 +22,15 @@ exports.run = async (client, message, args) => {
   }
   
   db.delete(`warn_${message.guild.id}_${kullanıcı.id}`)
-  const guhrıkgmp
+  const guhrıkgmpewrgşöergğewrglwerğşgöwergqergçerügqergqrögpqüergöqergöqrügöqergş = new Discord.MessageEmbed()
+  .setDescription(`Başarıyla ${kullanıcı} Adlı Kullanıcının Uyarılarını Sıfırladım !`)
+  .setColor("RANDOM")
+  message.channel.send(guhrıkgmpewrgşöergğewrglwerğşgöwergqergçerügqergqrögpqüergöqergöqrügöqergş)
+  
+  const logmesajıxdhepinizisikçemamqpuştları = new Discord.MessageEmbed()
+  .setDescription(`${kullanıcı} Adlı Kullanıcının Uyarıları ${message.author} Tarafından Sıfırlandı !`)
+  .setColor("RANDOM")
+  client.channels.cache.get(log).send(logmesajıxdhepinizisikçemamqpuştları)
   
   
   

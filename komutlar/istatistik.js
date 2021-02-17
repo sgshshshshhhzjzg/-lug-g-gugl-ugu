@@ -16,5 +16,17 @@ exports.run = async (bot, message, args) => {
   .addField("**Kanal Sayısı**", bot.channels.size.toLocaleString(), true)
   .addField("**Ping/Gecikme", bot.ping+"ms", true)
   .addField("**Discord.js Sürümü**", "v"+Discord.version, true)
-  .addField("CPU")
+  .addField("CPU",`md\n${os.cpus().map(i => `${i.model}`)[0]}`,true)
+  message.channel.send(napimstats)
 }
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ["i", "stats"],
+  permlvl: 1
+};
+
+exports.help = {
+  name: "istatistik"
+};

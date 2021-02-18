@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
     );
 
   if (args[0] === "ayarla") {
-    db.set(`banlog_${message.guild.id}`, kanal.id);
+    db.set(`kicklog_${message.guild.id}`, kanal.id);
     message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
